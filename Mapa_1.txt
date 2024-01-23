@@ -1,0 +1,26 @@
+############################################
+#J   SSSSSSSSSSSSSOSSSSSSSSSS#SSSSSSSSSSSSS#
+#   SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSESSS#
+#                SSSSSSSSSS        TSSSSSSS#
+##########SSS   A       SSSSSSSSSSSSSSSS   #
+#SSSSSSSSSSSSSSSS#  SSSS    SSSSSSSSSS     #
+#SSSSOSSSSSSSSSSS#   SSSSSSSSSSS     SSSSS #
+#SSSSSSSSS########SSSSSSSSSS SSSSS        A#
+#SSS             ##   SSSSSSSSSS   #########
+#SS   T          #E         SSSSSSSSSS     #
+#SSSSSS          ######       SSSSSSSSSS   #
+#SSSSSSSS    SSSSSSSSSSOSSSSSSSSSSSSSS     #
+###########    SSSSSSSSSS      SSSSSSSSSSSS#
+#OSSSSSSS                  SSSSASSSSSSSSSSS#
+#SSSSSSSSSSSS         SSSSSSSSSSSSSSSSSSSSS#
+#    A       T      SSSSSSSSSSSSS    SSSSSS#
+#SSSSSSSSSSS####################SSS#########
+#SSSS   SS    SSSSSSSSSSSSSSSSSSSSSSSSSSSS #
+#SSSS     SSSSSSSSSSSSSESSSSSSSSSSSSS      #
+#SSSSSSSSSSSS       SSSSSSSSSSSSSSSS       #
+#   A    #     SSSSSSSSSS T     SSSSSSSSS  #
+#        #        SSSSSSSSSSS     SSS      #
+# SSSSSS ######         S      ####SSSSS####
+#SSSSSSSSSSSSS#SSSSS   #########S   SSSSSSS#
+#TSSSSSSSSSSSE#SSSSSSSS    SSSSSSSSSSS O SS#
+############################################

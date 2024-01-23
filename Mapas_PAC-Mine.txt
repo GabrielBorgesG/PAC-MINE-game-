@@ -1,0 +1,83 @@
+Mapa 1
+##################################
+#J   SSSSSSSSSSOSSSSSSS#SSSSSSSSS#
+#   SSSSSSSSSSSSSSSSSSSSSSSSSESSS#
+#                        TSSSSSSS#
+##########   A       SSSSSSSSS   #
+#SSSSSSSSSSSSSSSS#  S    SSS     #
+#SSSSOSSSSSSSSSSS#   S     SSSSS #
+#SSSSSSSSS######## SSSSS        A#
+#SSS             ##      #########
+#SS   T          #E              #
+#SSSSSS          ######          #
+#SSSSSSSS    SSSSSSSSOSSSSSS     #
+###########    SSSSSSSSSS      SS#
+#OSSSSSSS                  ASSSSS#
+#SSSSSSSSSSSS         SSSSSSSSSSS#
+#    A       T      SSSSSSSSSSSSS#
+#SSSSSSSS################S########
+#SSSS   SS    SSSSSSSSSSSSSSSSSS #
+#SS     SSSSSSSSSSSSSESSSSS      #
+#SSSSS       SSSSSSSSSSSSS       #
+#   A    #     SSSSSS T     SSS  #
+#        #        SSSSSSSSS      #
+# SSSSSS ######         SSSSSS####
+#SSSSSSSSSSSSS#SSSSS      SSSSSSS#
+#TSSSSSSSSSSSE#SSSSSSSS    SSS O #
+##################################
+E=4; O=5; T=5; A=5
+
+Mapa 2
+######################################
+#     SSSSSSSSSSSSSSSSSSSOSSSSSS     #
+#   ESSSSSSSSSS  SSS    T#  SSSSS    #
+#T    SSSSSSSSSO SSSSS   #SSSSSESSSS #
+#######################  #######  SSS#
+#SSSSSSS        ESSSS    #OSSSSSSSSS #
+#SSSOSSS    ####SSS      #        A  #
+# SSSSSSS          T     SSSSSSSSSSSS#
+#           ##########################
+#        T    SSSSSSSSOSSSS     T    #
+#E########         SSSSSSSSSSSSSSSSSS#
+#   OSSSSSSSSS    J         #####ESSS#
+#SSSSSSSS        ###   SSSSSSSSSSSSSS#
+#         A SSSSSSSSSSSSSSS       ####
+########################     T    SSO#
+####     SSSSSS                 SSSSS#
+#    T   SSESSSSS   ##################
+#OSSSSSSSSSSSSSSSS      SSSSSSSSSSS  #
+################            SSSSOSSS #
+#SSSSST    T              A  SSSSSS  #
+#SE##################   ##############
+#SSSSSSSSSSSSSSOSSSSSSSSSST SSSSSSESS#
+######################################
+E=8; O=10; T=10; A=3
+
+Mapa 3
+############################################
+#OSSSSSSSSSS  #A     TSSSSSSSSSSSS   SSSS J#
+#SSSSS   T   SSSSSSSSSSSSO#SSSSSSSSS       #
+#      #####################################
+#SSSSSSSSSSSSSSS#ESSSSSSSSSSSSSSSSSSSSSSSSE#
+#SSSSSSSSSSSSSSS#SSSSSSSTSSSSSO#SSSSSSSSSSS#
+##########   SSO#    ##################T   #
+#O              #A  SSSSSSSSSSSS OOSSSSSSSS#
+#    T   ########### SSSSSSS   #############
+#    SSSSSSSSSSSSSSSSSSS ESSSS     TSSSS   #
+#SSSSSESSSSSS ##############         #SSSSE#
+#   SSSSSSSSSSSSSSSSST    OSS    #####  SSS#
+#        TSSSSSSSO  SSSSS SS              S#
+#  ################################### #####
+#     T  SSSSSSS#SSSSSSSSSSSSSSSS T     SSO#
+#SS SSSSSSSE    #SSSSSSSSSOSSSS    SSSSSSSS#
+#OSSSSS         #ESSSSSTSS  #     A        #
+####################SSSSS   # SSSSSSSS     #
+#SSSSSSSS          #S#################SSS  #
+#SSSS############  SSE#SSSSSSSSSSSSSSSOS   #
+#SSSSSE #                      TSSSSSSSSSSS#
+##############SSSSSSS#     #################
+#SSSSSSSSSSSO SSSS  #T  SSSSSSSSSSSSSSSSSSS#
+#SSSSS#SSSS##################OSSSSSSSSSESSS#
+#SSESS#T SSSSSSSSSSE   SSSSSSSSSSSSSTSSSSSS#
+############################################
+E=12; O=15; T=15; A=2
