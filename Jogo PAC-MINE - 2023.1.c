@@ -13,10 +13,10 @@ MAPA 3: E=12; O=15; T=15; A=2
 #include <time.h>
 #include <stdio.h>
 
-//DEFINI«’ES
+//DEFINI√á√ïES
 #define FPS 8
 #define LARGURA 880
-#define ALTURA (520+(FONTE*6)) //Este aumento da tela È para o rodapÈ
+#define ALTURA (520+(FONTE*6)) //Este aumento da tela √© para o rodap√©
 #define VEL 20
 #define ARESTA_BLOCO 20
 #define TOUPEIRA_MAX 15
@@ -108,13 +108,13 @@ int podeMoverT (int posX, int posY, int desX, int desY, char mapa[][NUM_BLOC_LAR
     return resultado;
 }
 
-//ATUALIZA A POSI«√O DO JOGADOR
+//ATUALIZA A POSI√á√ÉO DO JOGADOR
 void move(int desX, int desY, int *posX, int *posY){
     *posX = *posX + desX;
     *posY = *posY + desY;
 }
 
-//ATUALIZA A POSI«√O DAS TOUPEIRAS
+//ATUALIZA A POSI√á√ÉO DAS TOUPEIRAS
 void Tmove(TOUPEIRA *Tponteiro){
     Tponteiro->TposX = Tponteiro->TposX + Tponteiro->TdesX;
     Tponteiro->TposY = Tponteiro->TposY + Tponteiro->TdesY;
@@ -149,7 +149,7 @@ int upload_mapa(char nome_arq_mapa[], char matriz[][NUM_BLOC_LARGURA_MAPA], POSI
     return ctrl;
 }
 
-//SALVA A POSI«√O DO JOGADOR
+//SALVA A POSI√á√ÉO DO JOGADOR
 int save(char nome_arq_mapa[], ESTADO jogador_estado){
     FILE *mapa;
     int ctrl=0;
@@ -161,7 +161,7 @@ int save(char nome_arq_mapa[], ESTADO jogador_estado){
     return ctrl;
 }
 
-//VERIFICA COLIS√O ENTRE BLOCOS
+//VERIFICA COLIS√ÉO ENTRE BLOCOS
 int colisao(int JposX, int JposY, int posX_bloco, int posY_bloco){
     int ctrl = 0;
 
@@ -226,11 +226,11 @@ void remove_do_mapa(char mapa[][NUM_BLOC_LARGURA_MAPA], int posX, int posY){
 //PROGRAMA PRINCIPAL
 int main(void){
 
-//DEFINI«’ES
+//DEFINI√á√ïES
     int posX, posY, i = 0, t = 0, ultimo_move, ctrl_nivel = 0, pontos_totais = 0;
     int timer = 0, fim_do_jogo = 0;
     char mapa[NUM_BLOC_ALTURA_MAPA][NUM_BLOC_LARGURA_MAPA] = {0}, bloco, m1 = 0, m2 = 0;
-    char status[6][25] = {"Vida: ", "Esmeraldas: ", "Ouro: ", "Inimigos eliminados: ", "Pontos totais: ", "Esmeraldas no nÌvel: "};
+    char status[6][25] = {"Vida: ", "Esmeraldas: ", "Ouro: ", "Inimigos eliminados: ", "Pontos totais: ", "Esmeraldas no n√≠vel: "};
     bool Byakugan = false, pause = false, sair_jogo = 0;
 
     FILE *ponteiro_mapa1, *ponteiro_mapa2, *ponteiro_mapa3;
@@ -244,10 +244,10 @@ int main(void){
     Rectangle parede2;
     Rectangle toupeira_rec;
 
-//INICIALIZA«’ES
+//INICIALIZA√á√ïES
     SetupWindow();
 
-//CARREGAMENTO DA M⁄SICA DE FUNDO
+//CARREGAMENTO DA M√öSICA DE FUNDO
     Music Ambiente;
     Ambiente = LoadMusicStream("./Som/fundo.mp3");
     PlayMusicStream(Ambiente);
@@ -268,30 +268,30 @@ int main(void){
        printf("Erro na leitura do mapa 1\n");
     }
 
-//INICIALIZA«√O DA POSI«√O DO JOGADOR
+//INICIALIZA√á√ÉO DA POSI√á√ÉO DO JOGADOR
     posX = posicao_do_jogador.posX*ARESTA_BLOCO;
     posY = posicao_do_jogador.posY*ARESTA_BLOCO;
 
-//INICIALIZA«√O DA POSI«√O DAS TOUPEIRAS CONFORME O MAPA E DESLOXAMENTO ALEAT”RIO
-    for (t=0; t < TOUPEIRA_MAX; t++){ //Faz a passagem por todas as posiÁıes do vetor
+//INICIALIZA√á√ÉO DA POSI√á√ÉO DAS TOUPEIRAS CONFORME O MAPA E DESLOXAMENTO ALEAT√ìRIO
+    for (t=0; t < TOUPEIRA_MAX; t++){ //Faz a passagem por todas as posi√ß√µes do vetor
                 toupeiras[t].TposX = toupeiras[t].TposX * ARESTA_BLOCO;
                 toupeiras[t].TposY = toupeiras[t].TposY * ARESTA_BLOCO;
                 toupeiras[t].vida = 1;
     }
     do{
-        toupeiras[t].TdesX = GetRandomValue(-1, 1) * ARESTA_BLOCO; //Coloca um deslocamento aleatÛrio para cada inimigo
+        toupeiras[t].TdesX = GetRandomValue(-1, 1) * ARESTA_BLOCO; //Coloca um deslocamento aleat√≥rio para cada inimigo
         toupeiras[t].TdesY = GetRandomValue(-1, 1) * ARESTA_BLOCO;
-    }while(toupeiras[t].TdesX == 0 && toupeiras[t].TdesY == 0); //AtÈ que pelo menos um dos deslocamentos (X ou Y) seja diferente de zero (inimigo parado)
+    }while(toupeiras[t].TdesX == 0 && toupeiras[t].TdesY == 0); //At√© que pelo menos um dos deslocamentos (X ou Y) seja diferente de zero (inimigo parado)
 
-//INICIALIZA«√O DO PROJ…TIL (TIRO)
-    Vector2 Tiro_pos = {0,0}; //Coloca o projÈtil na posiÁ„o (0, 0)
-    bool Tiro_ativo = false; //Coloca o projÈtil como inativo
+//INICIALIZA√á√ÉO DO PROJ√âTIL (TIRO)
+    Vector2 Tiro_pos = {0,0}; //Coloca o proj√©til na posi√ß√£o (0, 0)
+    bool Tiro_ativo = false; //Coloca o proj√©til como inativo
 
-//LA«O PRINCIPAL DO JOGO
-    while (!WindowShouldClose() && !sair_jogo/* && jogador.vida > 0*/){ //O jogo continua atÈ que: o usu·rio feche a janela, o jogador selecione a opÁ„o Q no menu ou morra
+//LA√áO PRINCIPAL DO JOGO
+    while (!WindowShouldClose() && !sair_jogo/* && jogador.vida > 0*/){ //O jogo continua at√© que: o usu√°rio feche a janela, o jogador selecione a op√ß√£o Q no menu ou morra
 
-//PASSAGEM DE NÕVEL
-        if((jogador.contador_esmeralda == ESMERALDAS_NIVEL_1) && ctrl_nivel == 0){ //Tem 4 esmeraldas no primeiro nÌvel e assim que ele atinge essa pontuaÁ„o, passa de fase
+//PASSAGEM DE N√çVEL
+        if((jogador.contador_esmeralda == ESMERALDAS_NIVEL_1) && ctrl_nivel == 0){ //Tem 4 esmeraldas no primeiro n√≠vel e assim que ele atinge essa pontua√ß√£o, passa de fase
             jogador_estado.nivel = 2;
             ctrl_nivel = 1;
         }
@@ -303,7 +303,7 @@ int main(void){
             posY = posicao_do_jogador.posY*ARESTA_BLOCO;
         }
 
-        if((jogador.contador_esmeralda == ESMERALDAS_NIVEL_1+ESMERALDAS_NIVEL_2) && (ctrl_nivel == 2)){  //Tem 8 esmeraldas no nÌvel 2
+        if((jogador.contador_esmeralda == ESMERALDAS_NIVEL_1+ESMERALDAS_NIVEL_2) && (ctrl_nivel == 2)){  //Tem 8 esmeraldas no n√≠vel 2
             jogador_estado.nivel = 3;
             ctrl_nivel = 3;
         }
@@ -315,7 +315,7 @@ int main(void){
             posY = posicao_do_jogador.posY*ARESTA_BLOCO;
         }
 
-//SE ATINGIR O N⁄MERO M¡XIMO DE ESMERALDAS
+//SE ATINGIR O N√öMERO M√ÅXIMO DE ESMERALDAS
         if(jogador.contador_esmeralda == ESMERALDAS_NIVEL_1+ESMERALDAS_NIVEL_2+ESMERALDAS_NIVEL_2){
             fim_do_jogo = 1;
         }
@@ -325,14 +325,14 @@ int main(void){
             pause = true; //Fica em pause
             do{
                 abreMenu(&pause, jogador_estado, &sair_jogo, mapa, &posicao_do_jogador, &toupeiras[0]);
-            }while(pause == true); //Enquanto pause n„o for alterado pela funÁ„o abreMenu, fica em loop
+            }while(pause == true); //Enquanto pause n√£o for alterado pela fun√ß√£o abreMenu, fica em loop
         }
 
-//M⁄SICA DE FUNDO
+//M√öSICA DE FUNDO
         UpdateMusicStream(Ambiente);
 
 //PARA USAR A TEXTURA
-        Rectangle Jogador_Rec; //Cria um ret‚ngulo para lidar com o jogador
+        Rectangle Jogador_Rec; //Cria um ret√¢ngulo para lidar com o jogador
         Jogador_Rec.x = posX;
         Jogador_Rec.y = posY;
         Jogador_Rec.width = ARESTA_BLOCO;
@@ -345,8 +345,8 @@ int main(void){
         Vector2 Inimigo_vec;
 
 //TIRO
-            if (Tiro_ativo){ //Se o tiro estiver ativo, ele se movimenta conforme a ˙ltima tentativa de movimentaÁ„o do jogador
-                //Escolha da direÁ„o do tiro
+            if (Tiro_ativo){ //Se o tiro estiver ativo, ele se movimenta conforme a √∫ltima tentativa de movimenta√ß√£o do jogador
+                //Escolha da dire√ß√£o do tiro
                 switch(ultimo_move){
                 case 1:
                     Tiro_pos.x += GetFrameTime() * 200;
@@ -361,11 +361,11 @@ int main(void){
                     Tiro_pos.y += GetFrameTime() * 200;
                     break;
                 }
-                //Fica ativo atÈ sair da janela
+                //Fica ativo at√© sair da janela
                 if(Tiro_pos.x > LARGURA || Tiro_pos.x < 0 || Tiro_pos.y > ALTURA || Tiro_pos.y < 0)
                     Tiro_ativo = false;
 
-                //Fica ativo atÈ sofrer colis„o com algum bloco
+                //Fica ativo at√© sofrer colis√£o com algum bloco
                 for(m1=0; m1 < NUM_BLOC_LARGURA_MAPA; m1++){
                     for(m2=0; m2 < NUM_BLOC_ALTURA_MAPA; m2++){
                         bloco = mapa[m2][m1];
@@ -393,17 +393,17 @@ int main(void){
                     }
                  }
             }
-            //Caso o projÈtil esteja inativo e o jogador apertar G, atira
+            //Caso o proj√©til esteja inativo e o jogador apertar G, atira
             else if(IsKeyDown(KEY_G)){
                 Tiro_ativo = true;
                 Tiro_pos = (Vector2){posX+(ARESTA_BLOCO/2),posY+(ARESTA_BLOCO/2)}; //Surge no meio do jogador
             }
 
-//TRATA ENTRADA DO USU¡RIO E ATUALIZA A POSI«√O DO JOGADOR E SUA MIRA
-            if (IsKeyDown(KEY_RIGHT)){ //VÍ se o usu·rio apertou a tecla
-                ultimo_move = 1; //Salva a tentativa de movimentaÁ„o
-                if (podeMoverJ(posX, posY, VEL, 0, mapa)) //VÍ se È possÌvel se mover nesta direÁ„o
-                    move(VEL, 0, &posX, &posY); //Se for possÌvel, se movimenta
+//TRATA ENTRADA DO USU√ÅRIO E ATUALIZA A POSI√á√ÉO DO JOGADOR E SUA MIRA
+            if (IsKeyDown(KEY_RIGHT)){ //V√™ se o usu√°rio apertou a tecla
+                ultimo_move = 1; //Salva a tentativa de movimenta√ß√£o
+                if (podeMoverJ(posX, posY, VEL, 0, mapa)) //V√™ se √© poss√≠vel se mover nesta dire√ß√£o
+                    move(VEL, 0, &posX, &posY); //Se for poss√≠vel, se movimenta
             }
             if (IsKeyDown(KEY_LEFT)){
                 ultimo_move = 2;
@@ -421,16 +421,16 @@ int main(void){
                     move(0, VEL, &posX, &posY);
             }
 
-//MOVIMENTA«√O DAS TOUPEIRAS
+//MOVIMENTA√á√ÉO DAS TOUPEIRAS
             for(t=0; t < TOUPEIRA_MAX; t++){ //Passa por todo o vetor que armaena inimigos
-                if(podeMoverT(toupeiras[t].TposX,toupeiras[t].TposY,toupeiras[t].TdesX, toupeiras[t].TdesY, mapa) && toupeiras[t].Tpassos <= LIMITE_PASSOS_TOUPEIRAS){ //Confere se a movimentaÁ„o È possÌvel e se o contador j· atingiu o limite m·ximo
-                    Tmove(&toupeiras[t]); //Realiza a movimentaÁ„o
+                if(podeMoverT(toupeiras[t].TposX,toupeiras[t].TposY,toupeiras[t].TdesX, toupeiras[t].TdesY, mapa) && toupeiras[t].Tpassos <= LIMITE_PASSOS_TOUPEIRAS){ //Confere se a movimenta√ß√£o √© poss√≠vel e se o contador j√° atingiu o limite m√°ximo
+                    Tmove(&toupeiras[t]); //Realiza a movimenta√ß√£o
                     toupeiras[t].Tpassos++; //Aumenta o contador de passos
                 }
                 else{
-                    toupeiras[t].Tpassos = 0; //Reinicia o n˙mero de passos
+                    toupeiras[t].Tpassos = 0; //Reinicia o n√∫mero de passos
                     do{
-                        //D· um novo deslocamento para as toupeiras
+                        //D√° um novo deslocamento para as toupeiras
                         toupeiras[t].TdesX = GetRandomValue(-1, 1) * ARESTA_BLOCO;
                         toupeiras[t].TdesY = GetRandomValue(-1, 1) * ARESTA_BLOCO;
                     }while(toupeiras[t].TdesX == 0 && toupeiras[t].TdesY == 0);
@@ -459,7 +459,7 @@ int main(void){
             }
 
 //----------------------------------------------------------------------------------
-//ATUALIZA A REPRESENTA«√O VISUAL DO JOGO
+//ATUALIZA A REPRESENTA√á√ÉO VISUAL DO JOGO
 //----------------------------------------------------------------------------------
         BeginDrawing();
         ClearBackground(BLACK);
@@ -525,8 +525,8 @@ int main(void){
             }
          }
 
-//CONTROLE DO PODER DA VIS√O GLOBAL
-        if(Byakugan) //Se o poder visual estiver ativo, o timer comeÁa a contar/aumentar
+//CONTROLE DO PODER DA VIS√ÉO GLOBAL
+        if(Byakugan) //Se o poder visual estiver ativo, o timer come√ßa a contar/aumentar
            timer++;
 
         if(timer > TEMPO_VISAO_GLOBAL){ //Quando o timer atinge o limite, o poder fica inativo e o timer zera
@@ -536,8 +536,8 @@ int main(void){
 
 //ESCREVE STATUS DO JOGADOR
         sprintf(status[0], "Vida: %d", jogador.vida);
-        sprintf(status[1], "Sharingans: %d", jogador.contador_esmeralda); //An·logo ‡ esmeralda
-        sprintf(status[2], "Marcas da maldicao: %d", jogador.contador_ouro); //An·logo ao ouro
+        sprintf(status[1], "Sharingans: %d", jogador.contador_esmeralda); //An√°logo √† esmeralda
+        sprintf(status[2], "Marcas da maldicao: %d", jogador.contador_ouro); //An√°logo ao ouro
         sprintf(status[3], "Inimigos eliminados: %d", jogador.inimigos_eliminados); // Permite que a string seja atualizada e salva em Texto[0]
         sprintf(status[4], "Pontos totais: %d", (jogador.contador_esmeralda*PONTOS_ESMERALDA)+(jogador.contador_ouro*PONTOS_OURO)+(jogador.inimigos_eliminados*PONTOS_INIMIGO));
         if(jogador_estado.nivel == 1)  sprintf(status[5], "Numero total de esmeraldas no nivel: %d", ESMERALDAS_NIVEL_1);
@@ -575,7 +575,7 @@ int main(void){
         }
 
 //DEFINE O FIM DE JOGO
-        //VitÛria
+        //Vit√≥ria
         if(fim_do_jogo == 1){
             DrawRectangle(0, 0, LARGURA, ALTURA, BLACK);
             DrawText("VOCE VENCEU!!!", (LARGURA - MeasureText("VOCE VENCEU!!!", FONTE*2))/2, (ALTURA-(FONTE*2))/2, FONTE*2, WHITE);
